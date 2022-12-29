@@ -1,7 +1,12 @@
+import Hero from "./pages/Hero";
+import NavBar from "./components/shared/NavBar";
+
+
 export default function App() {
   return (
     <div>
-      <h1>Hello World</h1>
+      <NavBar />
+      <Hero />
     </div>
   );
 }
