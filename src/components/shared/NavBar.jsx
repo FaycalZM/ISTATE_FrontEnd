@@ -15,9 +15,17 @@ import AdbIcon from '@mui/icons-material/Adb';
 import Boutton from './Boutton';
 import { dividerClasses } from '@mui/material';
 
-const pages = ['Top offers', 'Search', 'References', 'Abous us', 'Our team'];
+// const pages = ['Top offers', 'Search', 'References', 'Abous us', 'Our team'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
+const pages = [
+  {name : 'Top offers', pageid :''},
+  {name : 'Search', pageid :''},
+  {name : 'Abous us', pageid :'#About'},
+  {name : 'Our team', pageid :'#Team'},
+  {name : 'Contact us', pageid :'#Contact'},
+
+];
 
 function ResponsiveAppBar({signed}) {
 
@@ -43,7 +51,7 @@ function ResponsiveAppBar({signed}) {
   };
 
   return (
-    <AppBar class="cd" position="static">
+    <AppBar class="cd">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
         <img src="/images/NavBar/Logo.svg" alt="" className="pr-4 hidden md:flex"/>
@@ -97,8 +105,12 @@ function ResponsiveAppBar({signed}) {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page}  onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem 
+                  component={Button}
+                  href={page.pageid}
+                  key={page.name}                  
+                  onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">{page.name}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -125,12 +137,13 @@ function ResponsiveAppBar({signed}) {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } , marginLeft :"7.5%"}}>
             {pages.map((page) => (
-              <Button
+              <Button 
+                href={page.pageid}
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my:2, color: 'black', display: 'block' }}
               >
-                {page}
+                {page.name}
               </Button>
             ))}
           </Box>
