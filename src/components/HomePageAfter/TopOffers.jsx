@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import HouseCard from "../shared/HouseCard";
 import { AiFillLeftCircle, AiFillRightCircle } from "react-icons/ai";
+import { houses } from "../../utils/houses";
 
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -11,49 +12,11 @@ export default function TopOffers() {
   const goLeft = () => swiperRef.current.swiper.slidePrev();
   const goRight = () => swiperRef.current.swiper.slideNext();
 
-  const houses = [
-    {
-      image:
-        "https://myfancyhouse.com/wp-content/uploads/2015/03/Exquisite-Private-Home-In-Florida-By-Harwick-Homes-14.jpg",
-      title: "Large 4-room apartment with a beautiful terrace",
-      price: 320000,
-      location: "Barcelona IX.",
-    },
-    {
-      image:
-        "https://myfancyhouse.com/wp-content/uploads/2015/03/Exquisite-Private-Home-In-Florida-By-Harwick-Homes-14.jpg",
-      title: "Large 4-room apartment with a beautiful terrace",
-      price: 320000,
-      location: "Barcelona IX.",
-    },
-    {
-      image:
-        "https://myfancyhouse.com/wp-content/uploads/2015/03/Exquisite-Private-Home-In-Florida-By-Harwick-Homes-14.jpg",
-      title: "Large 4-room apartment with a beautiful terrace",
-      price: 320000,
-      location: "Barcelona IX.",
-    },
-    {
-      image:
-        "https://myfancyhouse.com/wp-content/uploads/2015/03/Exquisite-Private-Home-In-Florida-By-Harwick-Homes-14.jpg",
-      title: "Large 4-room apartment with a beautiful terrace",
-      price: 320000,
-      location: "Barcelona IX.",
-    },
-    {
-      image:
-        "https://myfancyhouse.com/wp-content/uploads/2015/03/Exquisite-Private-Home-In-Florida-By-Harwick-Homes-14.jpg",
-      title: "Large 4-room apartment with a beautiful terrace",
-      price: 320000,
-      location: "Barcelona IX.",
-    },
-  ];
-
   return (
     <section className="section-layout bg-white-blue">
       <h2 className="title-lg">Top offers</h2>
       <div className="flex flex-col gap-4 md:flex-row items-center justify-between my-4">
-        <p className="text-dark-blue md:text-lg w-full md:w-1/2">
+        <p className="title-description w-full md:w-1/2">
           Fullfil your career dreams, enjoy all the achievements of the city
           center and luxury housing the fullest.
         </p>
@@ -63,10 +26,10 @@ export default function TopOffers() {
         <div className="text-5xl text-blue flex items-center gap-x-2 md:gap-x-4">
           <div className="w-full h-px bg-blue opacity-30" />
           <button onClick={goLeft}>
-            <AiFillLeftCircle />
+            <AiFillLeftCircle className="hover:text-hover duration-300" />
           </button>
           <button onClick={goRight}>
-            <AiFillRightCircle />
+            <AiFillRightCircle className="hover:text-hover duration-300" />
           </button>
         </div>
       </div>
@@ -91,7 +54,9 @@ export default function TopOffers() {
           {houses &&
             houses.map((house) => (
               <SwiperSlide>
-                <HouseCard house={house} />
+                <div className="flex justify-center">
+                  <HouseCard house={house} />
+                </div>
               </SwiperSlide>
             ))}
         </Swiper>
