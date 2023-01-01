@@ -8,10 +8,10 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<Layout />}>
-          <Route path="/before" element={<HomePageBefore />} />
-          <Route path="/after" element={<HomePageAfter />} />
-          <Route path="/single" element={<SingleElement />} />
+        <Route path="/" element={<Layout />}>
+          <Route path="before" element={<HomePageBefore />} />
+          <Route path="after" element={<HomePageAfter />} />
+          <Route path="single" element={<SingleElement />} />
         </Route>
       </Routes>
     </BrowserRouter>
