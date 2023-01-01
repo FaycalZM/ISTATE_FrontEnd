@@ -1,20 +1,19 @@
-import Hero from "./pages/Hero";
-import NavBar from "./components/shared/NavBar";
-import About from "./pages/About";
-import Team from "./pages/Team";
-import Footer from "./components/shared/Footer";
-import SubNewsletter from "./components/shared/SubNewsletter";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePageAfter from "./pages/HomePageAfter";
+import SingleElement from "./pages/SingleElement";
+import Layout from "./components/shared/Layout";
+import HomePageBefore from "./pages/HomePageBefore";
 
 export default function App() {
   return (
-    <div>
-      <NavBar />
-      <Hero />
-      <About />
-      <Team />
-      <SubNewsletter />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/before" element={<HomePageBefore />} />
+          <Route path="/after" element={<HomePageAfter />} />
+          <Route path="/single" element={<SingleElement />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }

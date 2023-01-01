@@ -1,8 +1,7 @@
-import { Button, TextField } from '@mui/material';
-import React from 'react';
-import Boutton2 from './Boutton2';
+import { TextField } from '@mui/material';
+import Boutton2 from '../shared/Boutton2';
 
-function SubNewsletter(props) {
+export default function SubNewsletter() {
     return (
         <div className="flex flex-row justify-center gap-28 mr-20 py-20 bg-[#F3F3FA] w-screen">
             <img src="/images/Footer/Send.svg" alt="" className="hidden md:block" />
@@ -17,5 +16,3 @@ function SubNewsletter(props) {
         </div>
     );
 }
-
-export default SubNewsletter;

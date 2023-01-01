@@ -1,7 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  .section-layout {
+    @apply p-4 md:p-8 lg:p-16 xl:p-20;
+  }
+}
+
+@layer components {
+  .title-lg {
+    @apply font-Merriweather text-2xl md:text-4xl font-bold text-dark-blue;
+  }
+
+  .title-description {
+    @apply text-dark-blue text-sm md:text-lg;
+  }
+
+  .title-sm {
+    @apply font-Merriweather text-sm md:text-base font-bold text-dark-blue;
+  }
+
+  .primary-btn-lg {
+    @apply text-xl;
+  }
+
+  .secondary-btn-lg {
+    @apply md:text-lg px-4 py-2 border-2 rounded-md border-blue text-blue hover:border-hover hover:text-hover duration-300;
+  }
+
+  .primary-btn-sm {
+    @apply px-4 py-2 text-white rounded text-sm md:text-base bg-blue hover:bg-hover duration-300;
+  }
+
+  .secondary-btn-sm {
+    @apply px-4 py-2 border-2 rounded-md border-blue text-blue hover:border-hover hover:text-hover duration-300;
+  }
+
+  .input-text,
+  .input-select {
+    @apply p-2 rounded border border-[#AAA] active:border-blue text-sm md:text-base;
+  }
+
+  .input-select {
+    @apply w-full;
+  }
+}
 
 *{
   scroll-behavior: smooth;
