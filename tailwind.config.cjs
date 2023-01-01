@@ -12,6 +12,10 @@ module.exports = {
       fontFamily: {
         Merriweather: ["Merriweather", "serif"],
       },
+      spacing: {
+        112: "28rem",
+        144: "34rem",
+      },
     },
   },
   plugins: [],

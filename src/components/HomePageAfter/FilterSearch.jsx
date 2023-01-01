@@ -75,7 +75,7 @@ export default function FilterSearch() {
           max={100000000}
           onChange={rangeChange}
         />
-        <span className="text-blue font-semibold">{rangeValue} DA</span>
+        <span className="text-blue font-semibold w-28">{rangeValue} DA</span>
       </div>
     </div>
   );

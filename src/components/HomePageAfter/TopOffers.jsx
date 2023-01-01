@@ -35,8 +35,7 @@ export default function TopOffers() {
       </div>
       <div>
         <Swiper
-          slidesPerView={3}
-          className="mySwiper py-2"
+          className="mySwiper py-6"
           loop={true}
           breakpoints={{
             1: {
