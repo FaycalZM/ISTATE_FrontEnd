@@ -9,8 +9,8 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route path="before" element={<HomePageBefore />} />
-          <Route path="after" element={<HomePageAfter />} />
+          <Route index element={<HomePageBefore />} />
+          <Route path="home" element={<HomePageAfter />} />
           <Route path="single" element={<SingleElement />} />
         </Route>
       </Routes>

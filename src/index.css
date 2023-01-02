@@ -23,20 +23,23 @@
     @apply font-Merriweather text-sm md:text-base font-bold text-dark-blue;
   }
 
+  .primary-btn-sm,
   .primary-btn-lg {
-    @apply text-xl;
+    @apply px-4 py-2 text-white rounded bg-blue hover:bg-hover duration-300;
   }
 
   .secondary-btn-lg {
-    @apply md:text-lg px-4 py-2 border-2 rounded-md border-blue text-blue hover:border-hover hover:text-hover duration-300;
-  }
-
-  .primary-btn-sm {
-    @apply px-4 py-2 text-white rounded text-sm md:text-base bg-blue hover:bg-hover duration-300;
-  }
-
-  .secondary-btn-sm {
     @apply px-4 py-2 border-2 rounded-md border-blue text-blue hover:border-hover hover:text-hover duration-300;
+  }
+
+  .primary-btn-lg,
+  .secondary-btn-lg {
+    @apply md:text-lg;
+  }
+
+  .primary-btn-sm,
+  .secondary-btn-sm {
+    @apply text-sm md:text-base;
   }
 
   .input-text,
@@ -49,22 +52,21 @@
   }
 }
 
-*{
+* {
   scroll-behavior: smooth;
 }
 
 .cd {
-    position: fixed;
-    width: 100%;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    z-index: 10;
-    background-color: white
+  position: fixed;
+  width: 100%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  z-index: 10;
+  background-color: white;
 }
 
-*::-webkit-scrollbar{
+*::-webkit-scrollbar {
   display: none;
 }
-
 
 .TeamCard {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
@@ -74,12 +76,9 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.CardPhoto{
+.CardPhoto {
   transition: width 0.1s;
 }
 .TeamCard:hover .CardPhoto {
   width: 180px;
 }
-
-
-
