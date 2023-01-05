@@ -34,7 +34,7 @@ export default function Hero() {
       </div>
       <div className=" ">
         <img
-          src="/images/Hero/Building0.svg"
+          src=" https://files.fm/thumb_show.php?i=qk882g35x"
           alt="Building"
           className="w-[500px] lg:w-[600px]"
         />

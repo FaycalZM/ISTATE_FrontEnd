@@ -5,10 +5,10 @@ export default function Navbar() {
   const toggleVisible = () => setVisible(!visible);
 
   return (
-    <nav className="py-4 md:py-8 px-4 md:px-8 lg:px-16 xl:px-20 flex items-center flex-col lg:flex-row">
+    <nav className="bg-white shadow-md py-4 md:py-3 px-4 md:px-8 lg:px-16 xl:px-20 flex items-center flex-col lg:flex-row ">
       <div className="flex justify-between items-center w-full lg:w-auto lg:mx-16 xl:mx-20">
         <a href="/">
-          <img src="/images/NavBar/Logo.svg" alt="Logo" />
+          <img src="/shared//Logo.svg" alt="Logo" />
         </a>
         <button className="space-y-2 w-12 lg:hidden" onClick={toggleVisible}>
           <div className="w-full h-1 rounded-full bg-dark-blue" />

@@ -7,7 +7,7 @@ function Footer(props) {
                 <div class="md:flex md:justify-between">
                     <div class="mb-6 md:mb-0">
                         <a class="flex items-center">
-                            <img src="/images/NavBar/LogoWhite.svg" class="mr-3 h-8" alt="FlowBite Logo" />
+                            <img src="/shared/LogoWhite.svg" class="mr-3 h-8" alt="FlowBite Logo" />
                             <span class="self-center text-2xl font-semibold whitespace-nowrap text-white dark:text-white">ReState</span>
                         </a>
                     </div>
