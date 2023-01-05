@@ -17,14 +17,20 @@ export default function Navbar() {
         </button>
       </div>
       <div
-        className={`md:flex items-center justify-between w-full flex-col lg:flex-row ${
+        className={`lg:flex items-center justify-between w-full flex-col lg:flex-row ${
           visible ? "flex" : "hidden"
         }`}
       >
         <div className="flex flex-col items-center lg:flex-row space-y-4 lg:space-y-0 my-4 font-semibold text-sm md:text-base lg:text-lg lg:space-x-8">
-          <a href="#About">About us</a>
-          <a href="#Team">Our team</a>
-          <a href="#Contact">Contact us</a>
+          <a href="#About" className="hover:text-hover duration-300">
+            About us
+          </a>
+          <a href="#Team" className="hover:text-hover duration-300">
+            Our team
+          </a>
+          <a href="#Contact" className="hover:text-hover duration-300">
+            Contact us
+          </a>
         </div>
         <div className="space-x-4">
           <button className="primary-btn-sm">Sign in</button>

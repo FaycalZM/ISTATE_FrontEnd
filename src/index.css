@@ -11,16 +11,30 @@
 }
 
 @layer components {
+  .title-xl,
+  .title-lg,
+  .title-sm {
+    @apply font-Merriweather font-bold text-dark-blue;
+  }
+
+  .title-xl {
+    @apply text-3xl md:text-4xl lg:text-5xl text-center md:text-start;
+  }
+
   .title-lg {
-    @apply font-Merriweather text-2xl md:text-4xl font-bold text-dark-blue;
+    @apply text-2xl md:text-4xl;
+  }
+
+  .title-sm {
+    @apply text-sm md:text-base;
   }
 
   .title-description {
     @apply text-dark-blue text-sm md:text-lg;
   }
 
-  .title-sm {
-    @apply font-Merriweather text-sm md:text-base font-bold text-dark-blue;
+  .title-description-lg {
+    @apply text-dark-blue md:text-lg text-justify;
   }
 
   .primary-btn-sm,
@@ -56,29 +70,6 @@
   scroll-behavior: smooth;
 }
 
-.cd {
-  position: fixed;
-  width: 100%;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  z-index: 10;
-  background-color: white;
-}
-
 *::-webkit-scrollbar {
   display: none;
-}
-
-.TeamCard {
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-}
-
-.TeamCard:hover {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-.CardPhoto {
-  transition: width 0.1s;
-}
-.TeamCard:hover .CardPhoto {
-  width: 180px;
 }
