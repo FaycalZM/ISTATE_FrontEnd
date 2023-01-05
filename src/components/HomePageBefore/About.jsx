@@ -5,7 +5,7 @@ export default function About() {
       className="flex md:flex-row flex-col justify-center h-[950px] items-center w-screen gap-24"
     >
       <img
-        src="/images/About/Worker.svg"
+        src="https://files.fm/thumb_show.php?i=y6shd7976"
         alt=""
         className=" w-[500px] md:w-[60%] lg:w-[45%] mr-9 md:mr-0"
       />

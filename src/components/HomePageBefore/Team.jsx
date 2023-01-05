@@ -1,17 +1,9 @@
 import React from "react";
 import TeamCard from "./TeamCard";
+import { team } from "../../utils/team";
+
 
 export default function Team() {
-  const team = [
-    { Photo: "Davis", FullName: "Davis Carder", Role: "Super duper position" },
-    { Photo: "Hayile", FullName: "Haylie Donin", Role: "Super duper position" },
-    {
-      Photo: "Miracle",
-      FullName: "Miracle Bator",
-      Role: "Super duper position",
-    },
-    { Photo: "Randy", FullName: "Randy Rosser", Role: "Super duper position" },
-  ];
 
   return (
     <div
@@ -31,7 +23,7 @@ export default function Team() {
       <div className="grid grid-cols-1 md:grid-cols-2 w-fit h-fit gap-8">
         {team.map((teamMember) => (
           <TeamCard
-            Photo={`/images/Team/${teamMember.Photo}.svg`}
+            Path={teamMember.Path}
             FullName={teamMember.FullName}
             Role={teamMember.Role}
           />
