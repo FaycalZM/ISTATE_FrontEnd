@@ -2,7 +2,6 @@ import { useState } from "react";
 
 export default function FilterSearch() {
   const [rangeValue, setRangeValue] = useState(0);
-
   const rangeChange = (event) => setRangeValue(event.target.value);
 
   return (

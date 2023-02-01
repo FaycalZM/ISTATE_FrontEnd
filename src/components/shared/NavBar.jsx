@@ -1,8 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { gapi } from "gapi-script";
+import Login from "./Login";
+import { CLIENT_ID } from "../../utils/environement";
 
 export default function Navbar() {
   const [visible, setVisible] = useState(false);
   const toggleVisible = () => setVisible(!visible);
+
+  useEffect(() => {
+    function start() {
+      gapi.client.init({
+        clienId: CLIENT_ID,
+        scope: "",
+      });
+    }
+
+    gapi.load("client:auth2", start);
+  });
 
   return (
     <nav className="bg-white shadow-md py-4 md:py-3 px-4 md:px-8 lg:px-16 xl:px-20 flex items-center flex-col lg:flex-row ">
@@ -33,8 +47,7 @@ export default function Navbar() {
           </a>
         </div>
         <div className="space-x-4">
-          <button className="primary-btn-sm">Sign in</button>
-          <button className="primary-btn-sm">Sign up</button>
+          <Login />
         </div>
       </div>
     </nav>
