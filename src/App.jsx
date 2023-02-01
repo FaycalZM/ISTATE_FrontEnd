@@ -3,7 +3,6 @@ import HomePageAfter from "./pages/HomePageAfter";
 import SingleElement from "./pages/SingleElement";
 import Layout from "./components/shared/Layout";
 import HomePageBefore from "./pages/HomePageBefore";
-import Registration from "./pages/Registration";
 
 export default function App() {
   return (
@@ -13,7 +12,6 @@ export default function App() {
           <Route index element={<HomePageBefore />} />
           <Route path="home" element={<HomePageAfter />} />
           <Route path="single" element={<SingleElement />} />
-          <Route path="register" element={<Registration />} />
         </Route>
       </Routes>
     </BrowserRouter>
