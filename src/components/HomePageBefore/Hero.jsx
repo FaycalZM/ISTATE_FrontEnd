@@ -1,5 +1,3 @@
-import { AiOutlineGoogle } from "react-icons/ai";
-
 export default function Hero() {
   return (
     <section className="section-layout grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -10,13 +8,6 @@ export default function Hero() {
           estate. We have been operating in Madrid and Barcelona more than 15
           years.
         </p>
-        <button
-          type="button"
-          className="primary-btn-sm flex items-center gap-x-2 mx-auto md:m-0"
-        >
-          <AiOutlineGoogle className="text-2xl" />
-          Continue with Google
-        </button>
       </div>
       <img
         src=" https://files.fm/thumb_show.php?i=qk882g35x"
