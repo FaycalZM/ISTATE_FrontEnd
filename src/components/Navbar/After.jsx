@@ -1,5 +1,4 @@
 import Logout from "../shared/Logout";
-import { api } from "../../utils/api";
 
 export default function After() {
   return (
@@ -7,17 +6,6 @@ export default function After() {
       <a href="/">
         <img src="/shared//Logo.svg" alt="Logo" />
       </a>
-      <button
-        onClick={async () => {
-          console.log(api.defaults.withCredentials);
-          api
-            .get("/user/1")
-            .then((res) => console.log(res))
-            .catch((err) => console.log(err));
-        }}
-      >
-        test
-      </button>
       <Logout />
     </nav>
   );
