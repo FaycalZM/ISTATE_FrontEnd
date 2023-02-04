@@ -40,7 +40,7 @@ export default function AddAnnonce({ getAnnonces }) {
   };
 
   return (
-    <section className="section-layout bg-white-blue">
+    <section className="section-layout">
       <div className="flex flex-col items-center gap-y-4">
         <h2 className="title-lg">Add offer</h2>
         <p className="title-description">
