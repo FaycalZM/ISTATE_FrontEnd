@@ -6,7 +6,7 @@ export default function ProtectedRoute({ children }) {
 
   console.log(connected)
   if (!connected) return <Navigate to="/" replace/>;
-  if (!confirmed) return <Navigate to="/resgiter" replace/>;
+  if (confirmed === 0) return <Navigate to="/resgiter" replace/>;
 
   return children;
 }

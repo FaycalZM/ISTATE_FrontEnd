@@ -13,7 +13,7 @@ export default function App() {
           <Route index element={<HomePage />} />
           <Route path="register" element={<Register />} />
           <Route
-            path="single"
+            path="offers/:oid"
             element={
               <ProtectedRoute>
                 <SingleElement />
