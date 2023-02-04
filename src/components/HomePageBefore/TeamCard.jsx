@@ -1,7 +1,7 @@
 export default function TeamCard({ Path, FullName, Role }) {
   return (
     <div className="flex justify-center">
-      <div class="shadow-lg hover:shadow-xl duration-300 w-52 xl:w-72 py-8 bg-white border border-gray-200 rounded-lg">
+      <div class="shadow-lg hover:shadow-xl duration-300 w-52 xl:w-72 py-8 bg-white-blue border border-gray-200 rounded-lg">
         <div class="flex flex-col items-center gap-y-2">
           <img
             class="w-1/2 rounded-full"
