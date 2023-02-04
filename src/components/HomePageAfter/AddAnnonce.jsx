@@ -3,9 +3,9 @@ import { useState } from "react";
 import Select from "../shared/Select";
 import { wilayas, types, caetgories } from "../../utils/values";
 import TextArea from "../shared/TextArea";
-import MapModal from "../shared/MapModal";
+import { api } from "../../utils/api";
 
-export default function AddAnnonce() {
+export default function AddAnnonce({ getAnnonces }) {
   const [visible, setVisible] = useState(false);
   const [titre, setTitre] = useState("");
   const [surface, setSurface] = useState(0);
@@ -19,6 +19,7 @@ export default function AddAnnonce() {
 
   const submit = (event) => {
     event.preventDefault();
+    const id = localStorage.getItem("user");
 
     const annonce = {
       wilaya,
@@ -32,7 +33,10 @@ export default function AddAnnonce() {
       adresse,
     };
 
-    console.log(annonce);
+    api
+      .post(`/user/${id}/depot_annonce`, annonce)
+      .then(() => getAnnonces())
+      .catch((err) => console.log(err));
   };
 
   return (
@@ -48,20 +52,14 @@ export default function AddAnnonce() {
               values={caetgories}
               setValue={setCategorie}
             />
-            <Input label="Area" setValue={setSurface} type="number" />
-            <TextArea label="Description" setValue={setDescription} rows={2} />
+            <Select label="Wilaya" values={wilayas} setValue={setWilaya} />
+            <Input label="City" setValue={setCommune} type="text" />
           </div>
           <div className="w-full">
             <Input label="Price" setValue={setPrix} type="number" />
-            <Select label="Wilaya" values={wilayas} setValue={setWilaya} />
-            <Input label="City" setValue={setCommune} type="text" />
+            <Input label="Area" setValue={setSurface} type="number" />
+            <TextArea label="Description" setValue={setDescription} rows={2} />
             <TextArea rows={2} label="Address" setValue={setAdresse} />
-            <button
-              className="primary-btn-sm my-4"
-              onClick={() => setVisible(true)}
-            >
-              Location
-            </button>
           </div>
         </div>
         <div className="flex justify-center my-4">
@@ -70,7 +68,6 @@ export default function AddAnnonce() {
           </button>
         </div>
       </form>
-      <MapModal visible={visible} setVisible={setVisible} />
     </section>
   );
 }

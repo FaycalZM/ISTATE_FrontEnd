@@ -14,6 +14,7 @@ export default function Before() {
       .then((res) => {
         const { nom, prenom, telephone, id } = res.data.data;
         localStorage.setItem("user", id);
+
         if (nom === "" || prenom === "" || telephone === "")
           localStorage.setItem("confirmed", 0);
         window.location.reload(false);

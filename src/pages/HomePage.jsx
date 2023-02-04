@@ -6,7 +6,7 @@ export default function HomePage() {
   const connected = localStorage.getItem("user") ? true : false;
   const confirmed = parseInt(localStorage.getItem("confirmed"))
   
-  if (connected && !confirmed) return <Navigate to="/register"  replace/>;
+  if (connected && confirmed === 0) return <Navigate to="/register"  replace/>;
 
   return (
     <>

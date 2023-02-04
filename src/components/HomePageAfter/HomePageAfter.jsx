@@ -8,17 +8,21 @@ import TopOffers from "./TopOffers";
 export default function HomePageAfter() {
   const [annonces, setAnnonces] = useState([]);
 
-  useEffect(() => {
+  const getAnnonces = () => {
     api
       .get("/annonces")
-      .then((res) => console.log(res))
+      .then((res) => setAnnonces(res.data.data))
       .catch((err) => console.log(err));
+  };
+
+  useEffect(() => {
+    getAnnonces();
   }, []);
 
   return (
     <>
-      <AddAnnonce />
-      <SearchOffer />
+      <AddAnnonce getAnnonces={getAnnonces} />
+      <SearchOffer annonces={annonces} />
     </>
   );
 }
