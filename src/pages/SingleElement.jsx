@@ -1,11 +1,13 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { api } from "../utils/api";
+import MessageModal from "../components/shared/MessageModal";
 
 export default function SingleElement() {
   const [offer, setOffer] = useState({});
   const [contact, setContact] = useState({});
   const { oid } = useParams();
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     api
@@ -46,9 +48,16 @@ export default function SingleElement() {
           </div>
         </div>
         <div className="w-full flex justify-center">
-          <button className="primary-btn-sm">Contact</button>
+          <button onClick={() => setVisible(true)} className="primary-btn-sm">
+            Contact
+          </button>
         </div>
       </div>
+      <MessageModal
+        visible={visible}
+        setVisible={setVisible}
+        userId={offer.contact_id}
+      />
     </section>
   );
 }

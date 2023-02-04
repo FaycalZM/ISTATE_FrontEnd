@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { api } from "../../utils/api";
 import AddAnnonce from "./AddAnnonce";
+import MyMessages from "./MyMessages";
 import MyOffers from "./MyOffers";
 import SearchOffer from "./SearchOffer";
 
@@ -30,6 +31,7 @@ export default function HomePageAfter() {
     <>
       <AddAnnonce getAnnonces={getAnnonces} />
       <MyOffers annonces={userAnnonces} />
+      <MyMessages />
       <SearchOffer annonces={annonces} />
     </>
   );
