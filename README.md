@@ -17,7 +17,7 @@ Exécutez la commande npm install pour installer toutes les dépendances nécess
 <h2>Développement local</h2>
 
 Exécutez la commande npm run dev pour lancer le serveur de développement local
-<h6>La baseURL est dans</h6> </h4>src/utils/environment</h4>
+<h4>La baseURL est dans src/utils/environment</h4>
 
 
 Veuillez n'hésiter à consulter la documentation de ReactJS, Vite, TailwindCSS et Vercel pour plus d'informations.
