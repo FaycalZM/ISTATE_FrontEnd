@@ -7,7 +7,7 @@ import { api } from "../utils/api";
 export default function Register() {
   const userId = localStorage.getItem("user");
 
-  //if (!userId) return <Navigate to="/" replace />;
+  if (!userId) return <Navigate to="/" replace />;
 
   const [nom, setNom] = useState("");
   const [prenom, setPrenom] = useState("");
