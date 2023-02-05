@@ -6,7 +6,7 @@ En fin de compte, elle am´eliorera la communication et la transparence sur le m
 
 Ce repository contient le code source pour le frontend d'une application web développée avec ReactJS, Vite, TailwindCSS et authentifiée avec Google OAuth2. L'application est déployée sur Vercel.
 
-Installation des dépendances
+<h1>Installation des dépendances</h1>
 
 Clonez ce repository sur votre ordinateur
 Naviguez à l'intérieur du répertoire cloné
