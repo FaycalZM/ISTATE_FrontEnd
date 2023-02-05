@@ -8,7 +8,7 @@ export default function Register() {
   const userId = localStorage.getItem("user");
 
   if (!userId) return <Navigate to="/" replace />;
-  
+
   const [nom, setNom] = useState("");
   const [prenom, setPrenom] = useState("");
   const [telephone, setTelephone] = useState(0);
@@ -19,7 +19,7 @@ export default function Register() {
     api
       .get(`/user/${userId}`)
       .then((res) => setDefaultInfo(res.data.data))
-      .catch((err) => console.log(err));
+      .catch(() => {});
   }, []);
 
   const submit = (event) => {
@@ -36,7 +36,7 @@ export default function Register() {
           navigate("/");
         } else alert("There was an error");
       })
-      .catch((err) => console.log(err));
+      .catch(() => alert("There was an error"));
   };
 
   return (
