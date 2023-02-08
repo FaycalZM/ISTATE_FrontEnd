@@ -10,16 +10,18 @@ export default function MyMessages() {
     api
       .get(`/user/${id}/messages`)
       .then((res) => setMessages(res.data.data))
-      .catch(() => {});
+      .catch(() => { });
   }, []);
 
   return (
     <section className="section-layout bg-white-blue space-y-8">
       <div className="flex flex-col items-center gap-y-4">
         <h2 className="title-lg">My messages</h2>
-        <p className="title-description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        </p>
+        {
+          messages.length == 0 && <p className="title-description">
+            pas de messages actuellement.
+          </p>
+        }
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {messages &&
